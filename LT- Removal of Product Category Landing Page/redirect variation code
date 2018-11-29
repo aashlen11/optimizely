@@ -1,0 +1,6 @@
+var utils = window.optimizely.get('utils');
+
+utils.waitForElement('#top-nav-products').then(function(element){
+    var $ = window.optimizely.get('jquery');
+    $(element).attr('href','https://shop.prestigeportraits.com/shop/productSubCategoriesListing.html?category=Shop%20All%20Products');
+});
