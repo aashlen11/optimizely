@@ -1,0 +1,9 @@
+function(activate, options) {
+
+    var $ = window.optimizely.get('jquery');
+    var utils = window.optimizely.get('utils');
+
+    utils.waitForElement('#top-nav-products').then(function(){
+        $(document).on('mousedown touchstart', '#top-nav-products', function () { activate(); });
+    });
+}
